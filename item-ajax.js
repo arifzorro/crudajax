@@ -92,9 +92,12 @@ $( document ).ready(function() {
             }).done(function(data){
 
                 $("#create-item").find("input[name='title']").val('');
+                //console.log($("#create-item").find("input[name='title']").val(''));
                 $("#create-item").find("textarea[name='description']").val('');
                 getPageData();
-                $(".modal").modal('hide');
+                //$(".modal").modal('hide'); //ini salah pada tanda petik hide
+                $(".modal").modal("hide"); //ini yg benar pada tanda petik hide pake tanda petik 2
+                //$("#create-item").modal("hide"); //coba id create item yg dihde
                 toastr.success('Item Created Successfully.', 'Success Alert', {timeOut: 5000});
             });
         }else{

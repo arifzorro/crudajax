@@ -12,7 +12,7 @@ $sql = "INSERT INTO items (title,description)
 	VALUES ('".$post['title']."','".$post['description']."')";
 
 $result = $mysqli->query($sql);
-var_dump($result);
+// var_dump($result);
 
 $sql = "SELECT * FROM items Order by id desc LIMIT 1";
 
